@@ -1,0 +1,49 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+ 
+}
+
+@media (min-width: 48rem) {
+  .header {
+    margin-top: 3.75rem;
+    margin-bottom: 3.75rem;
+  }
+}
+
+.nav__list-item__link {
+  font-size: 1.3125rem;
+  line-height: 1.75rem;
+}
+
+@media (min-width: 48rem) {
+  .nav__list-item__link {
+    font-size: 1.75rem;
+    line-height: 2.5rem;
+  }
+}
+
+.nav__list-item__link:hover {
+  color: #003cff;
+}
+
+@media (min-width: 48rem) {
+  .logo {
+    padding-right: 22.5%;
+  }
+}
+
+.logo__img {
+  width: 4.2875rem;
+}
+
+@media (min-width: 48rem) {
+  .logo__img {
+    width: 7.35rem;
+    
+  }
+}
+

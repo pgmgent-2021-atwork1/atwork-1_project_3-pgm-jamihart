@@ -1,0 +1,37 @@
+.hero__img {
+  width: 100%;
+}
+
+.hero__img--container {
+  margin-bottom: 3.75rem;
+}
+
+.hero__content--paragarph {
+  font-size: 1.05rem;
+  line-height: 1.65rem;
+}
+
+@media (min-width: 64rem) {
+  .hero__content--paragarph {
+    font-size: 1.75rem;
+    line-height: 2.75rem;
+  }
+}
+
+.hero__content--link {
+  border-bottom: 2px solid black;
+  font-weight: normal;
+  transition: all 0.2s ease;
+}
+
+@media (min-width: 64rem) {
+  .hero__content--link {
+    font-size: 1.75rem;
+    line-height: 2.75rem;
+  }
+}
+
+.hero__content--link:hover {
+  color: #003cff;
+  border-bottom: 2px solid #003cff;
+}
