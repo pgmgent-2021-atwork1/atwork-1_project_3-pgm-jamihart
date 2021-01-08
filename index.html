@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Arne Quinze</title>
 
+    <!--
+        Ofwel header en footer in 1 css file samenzetten 
+        ofwel css linken in body tag boven component
+    -->
+
     <link rel="stylesheet" href="static/css/fonts.css">
     <link rel="stylesheet" href="static/css/elements.css">
     <link rel="stylesheet" href="static/css/header.css">
@@ -64,7 +69,7 @@
 
         <ul class="flex-container__homepage__list">
             <li class="flex-container__homepage__list-item">
-                <img class="flex-container__homepage__img" src="static/media/tijdelijk.jpg" alt="tijdelijk">
+                <img loading="lazy" class="flex-container__homepage__img" src="static/media/tijdelijk.jpg" alt="tijdelijk">
                 <h3>Sculpture - Liezele, Belgium</h3>
                 <h2>Purple Lupine sculpture</h2>
                 <p>This natural garden welcomes a new creature, with the artist's approving gaze. This Sculpture...</p>
@@ -72,7 +77,7 @@
             </li>
 
             <li class="flex-container__homepage__list-item">
-                <img class="flex-container__homepage__img" src="static/media/tijdelijk.jpg" alt="tijdelijk">
+                <img loading="lazy" class="flex-container__homepage__img" src="static/media/tijdelijk.jpg" alt="tijdelijk">
                 <h3>Sculpture - Liezele, Belgium</h3>
                 <h2>Purple Lupine sculpture</h2>
                 <p>This natural garden welcomes a new creature, with the artist's approving gaze. This Sculpture...</p>
@@ -80,7 +85,7 @@
             </li>
 
             <li class="flex-container__homepage__list-item">
-                <img class="flex-container__homepage__img" src="static/media/tijdelijk.jpg" alt="tijdelijk">
+                <img loading="lazy" class="flex-container__homepage__img" src="static/media/tijdelijk.jpg" alt="tijdelijk">
                 <h3>Sculpture - Liezele, Belgium</h3>
                 <h2>Purple Lupine sculpture</h2>
                 <p>This natural garden welcomes a new creature, with the artist's approving gaze. This Sculpture...</p>
@@ -91,7 +96,7 @@
 
     <section class="biography">
         <div class="biography__img--container h-layout--left">
-            <img class="biography__img" src="static/media/biography.png" alt="biography">
+            <img loading="lazy" class="biography__img" src="static/media/biography.png" alt="biography">
         </div>
 
         <div class="biography__content h-layout">
@@ -109,7 +114,7 @@
 
         <ul class="flex-container__homepage__list">
             <li class="flex-container__homepage__list-item">
-                <img class="flex-container__homepage__img" src="static/media/tijdelijk.jpg" alt="tijdelijk">
+                <img loading="lazy" class="flex-container__homepage__img" src="static/media/tijdelijk.jpg" alt="tijdelijk">
                 <h3>Sculpture - Liezele, Belgium</h3>
                 <h2>Purple Lupine sculpture</h2>
                 <p>This natural garden welcomes a new creature, with the artist's approving gaze. This Sculpture...</p>
@@ -117,7 +122,7 @@
             </li>
 
             <li class="flex-container__homepage__list-item">
-                <img class="flex-container__homepage__img" src="static/media/tijdelijk.jpg" alt="tijdelijk">
+                <img loading="lazy" class="flex-container__homepage__img" src="static/media/tijdelijk.jpg" alt="tijdelijk">
                 <h3>Sculpture - Liezele, Belgium</h3>
                 <h2>Purple Lupine sculpture</h2>
                 <p>This natural garden welcomes a new creature, with the artist's approving gaze. This Sculpture...</p>
@@ -125,7 +130,7 @@
             </li>
 
             <li class="flex-container__homepage__list-item">
-                <img class="flex-container__homepage__img" src="static/media/tijdelijk.jpg" alt="tijdelijk">
+                <img loading="lazy" class="flex-container__homepage__img" src="static/media/tijdelijk.jpg" alt="tijdelijk">
                 <h3>Sculpture - Liezele, Belgium</h3>
                 <h2>Purple Lupine sculpture</h2>
                 <p>This natural garden welcomes a new creature, with the artist's approving gaze. This Sculpture...</p>
@@ -172,6 +177,64 @@
                     </a>
                 </li>
             </ul>
+        </div>
+
+        <div class="footer__container__bottom">
+            <div class="footer__form">
+                <form action="GET">
+                    <label for="email">Stay informed</label>
+                    <input name="email" type="email" placeholder="e-mail">
+                </form>      
+            </div>
+
+            <div class="footer__instagram">
+                <div class="footer__instagram__title">
+                    <h2>Arne Quinze</h2>
+                    <a href="https://www.instagram.com/arnequinze/" class="footer__instagram__link__text">Visit our Instagram</a>
+                </div>
+                <div class="footer__instagram__pics">
+                    <ul class="footer__instagram__pics__list">
+                        <li class="footer__instagram__pics__list-item">
+                            <a target="_blank" href="https://www.instagram.com/p/CFcoMeWnjPU/" class="footer__instagram__link__pics__link">
+                                <img class="footer__instagram__link__pics__link-img" src="static/media/footer_instagram_1.jpg" alt="arne quinze instagram">
+                            </a>
+                        </li>
+
+                        <li class="footer__instagram__pics__list-item">
+                            <a target="_blank" href="https://www.instagram.com/p/CFcB1tzHKXS/" class="footer__instagram__link__pics__link">
+                                <img class="footer__instagram__link__pics__link-img" src="static/media/footer_instagram_2.jpg" alt="arne quinze instagram">
+                            </a>
+                        </li>
+
+                        <li class="footer__instagram__pics__list-item">
+                            <a target="_blank" href="https://www.instagram.com/p/CFaSKHQBBou/" class="footer__instagram__link__pics__link">
+                                <img class="footer__instagram__link__pics__link-img" src="static/media/footer_instagram_3.jpg" alt="arne quinze instagram">
+                            </a>
+                        </li>
+
+                        <li class="footer__instagram__pics__list-item">
+                            <a target="_blank" href="https://www.instagram.com/p/CFUzkLKHKHb/" class="footer__instagram__link__pics__link">
+                                <img class="footer__instagram__link__pics__link-img" src="static/media/footer_instagram_4.jpg" alt="arne quinze instagram">
+                            </a>
+                        </li>
+
+                        <li class="footer__instagram__pics__list-item">
+                            <a target="_blank" href="https://www.instagram.com/p/CFSJvo_nTa-/" class="footer__instagram__link__pics__link">
+                                <img class="footer__instagram__link__pics__link-img" src="static/media/footer_instagram_5.jpg" alt="arne quinze instagram">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="footer__bottom__rights-reserved">
+                    <p>© Arne Quinze, all rights reserved</p>
+                    <div class="footer__bottom__rights_reserved--links">
+                        <a href="https://www.arnequinze.com/terms-and-conditions">Terms & conditions</a>
+                        <a href="https://www.arnequinze.com/privacy-policy">Privacy Policy</a>
+                        <a href="#">Project Artevelde Jamie-Lee Hart</a>
+                    </div>
+                </div>
+            </div>
         </div>
 
     </footer>

@@ -29,6 +29,7 @@
   color: #003cff;
   font-size: 0.9rem;
   font-weight: bold;
+  transition: all 0.2s ease;
 }
 
 .flex-container__homepage__link:hover {
@@ -69,4 +70,9 @@
   border-bottom: 2px solid black;
   font-weight: normal;
   font-size: 1.3125rem;
+}
+
+.flex-container__homepage__list-item__link:hover {
+  color: #003cff;
+  border-bottom: 2px solid #003cff;
 }

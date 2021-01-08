@@ -39,6 +39,7 @@
 
 .biography__content__link {
   font-size: 1.05rem;
+  transition: all 0.2s ease;
 }
 
 @media (min-width: 64rem) {
