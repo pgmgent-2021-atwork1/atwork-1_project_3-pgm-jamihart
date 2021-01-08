@@ -8,17 +8,21 @@
   }
 }
 
-.flex-container__homepage__title {
+.flex-container__homepage__title__container {
   margin-bottom: 2.5rem;
 }
 
 @media (min-width: 64rem) {
-  .flex-container__homepage__title {
+  .flex-container__homepage__title__container {
     position: absolute;
-    top: 50%;
-    left: -7rem;
+    top: 40%;
+    left: -3rem;
     transform: rotate(270deg);
   }
+}
+
+.flex-container__homepage__title {
+  font-size: 1.75rem;
 }
 
 .flex-container__homepage__link {
@@ -50,6 +54,10 @@
    margin: 0 1rem;
    flex-grow: 1;
   }
+
+  .flex-container__homepage__list-item:nth-child(2) {
+    margin: 0 4rem;
+   }
 }
 
 .flex-container__homepage__img {
