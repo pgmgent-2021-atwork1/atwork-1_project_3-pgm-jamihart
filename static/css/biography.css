@@ -1,0 +1,226 @@
+.hero__image__container {
+  margin-bottom: 3.75rem;
+}
+
+.hero__image {
+  width: 100%;
+}
+
+@media (min-width: 48rem) {
+  .hero__content {
+    width: 57%;
+  }
+}
+
+@media (min-width: 64rem) {
+  .hero__content {
+    width: 40%;
+  }
+}
+
+.youtube-video {
+  margin: 0 auto;
+  margin-top: 8rem;
+  margin-bottom: 2rem;
+  width: 90rem;
+  max-width: 100%; 
+  padding-bottom: calc(495/880 * 100%);
+  position: relative;
+}
+
+.youtube-video iframe {
+  margin: 0 1rem;
+  position: absolute;
+  width: calc(100% - 2rem);
+  height: 100%;
+  left: 0;
+  right: 0;
+}
+
+@media (min-width: 48rem) {
+  .youtube-video iframe {
+    margin: 0 4rem;
+    width: calc(100% - 8rem);
+    height: calc(100% - 4rem);
+  }
+} 
+
+@media (min-width: 64rem) {
+  .youtube-video iframe {
+    margin: 0 8rem;
+    width: calc(100% - 16rem);
+    height: calc(100% - 8rem);
+  }
+}
+
+@media (min-width: 90rem) {
+  .youtube-video iframe {
+    margin: 0 8rem;
+    width: calc(100% - 16rem);
+    height: calc(100% - 16rem);
+  }
+}
+
+.nevada__uchronia p {
+  text-align: center;  
+}
+
+@media (min-width: 48rem) {
+  .nevada__uchronia p {
+    margin-top: -2rem;  
+  }
+} 
+
+@media (min-width: 64rem) {
+  .nevada__uchronia p {
+    margin-top: -4rem;  
+  }
+}
+
+@media (min-width: 90rem) {
+  .nevada__uchronia p {
+    margin-top: -10rem;  
+    margin-bottom: 6rem;
+  }
+}
+
+.biography__fig {
+  margin: 0;
+  margin-top: 3.75rem;
+}
+
+.biography__img {
+  width: 100%;
+}
+
+.biography__figcaption {
+  text-align: right;
+}
+
+.idealistic-society__container {
+  margin-top: 3.75rem;
+}
+
+@media (min-width: 48rem) {
+  .idealistic-society__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.idealistic-society__img {
+  width: 100%;
+}
+
+@media (min-width: 48rem) {
+  .idealistic-society__img {
+    width: 50%;
+    order: 2;
+    margin-left: 6.25rem;
+  }
+}
+
+.quote {
+  margin-top: 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.quote p {
+  font-size: 2.1rem;
+  font-weight: normal;
+  text-align: center;
+  line-height: 1.2;
+}
+
+.quote cite {
+  font-size: 1.75rem;
+  font-style: normal;
+}
+
+.quote cite::before {
+  content: '—';
+}
+
+.beauty-of-nature {
+  text-align: center;
+  margin-top: 3.75rem;
+}
+
+@media (min-width: 48rem) {
+  .beauty-of-nature {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.diversity {
+  margin-top: 3.75rem;
+}
+
+@media (min-width: 48rem) {
+  .diversity {
+    margin-top: 6.75rem;
+  }
+}
+
+.diversity__flex-container {
+  margin-bottom: 5rem;
+}
+
+@media (min-width: 48rem) {
+  .diversity__flex-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 6.25rem;
+  }
+}
+
+.diversity__img {
+  width: 100%;
+}
+
+@media (min-width: 48rem) {
+  .diversity__img {
+    width: calc(50% - 3.125rem);
+  }
+
+  .diversity__img:first-child {
+    margin-right: 6.25rem;
+  }
+}
+
+.diversity__img:first-child {
+  margin-bottom: 1rem;
+} 
+
+@media (min-width: 48rem) {
+  .gallery {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.gallery__img {
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+@media (min-width: 48rem) {
+  .gallery__img {
+    width: calc(33.3% - 3.75rem);
+  }
+
+  .gallery__img:nth-child(2) {
+    margin: 0 3.75rem;
+  }
+}
+
+
+
+

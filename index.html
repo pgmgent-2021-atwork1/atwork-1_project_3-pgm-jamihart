@@ -5,6 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Arne Quinze</title>
 
+    <link rel="apple-touch-icon" sizes="180x180" href="static/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="static/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="static/favicon/favicon-16x16.png">
+    <link rel="manifest" href="static/favicon/site.webmanifest">
+    <link rel="mask-icon" href="static/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#00aba9">
+    <meta name="theme-color" content="#ffffff">
+
     <!--
         Ofwel header en footer in 1 css file samenzetten 
         ofwel css linken in body tag boven component
@@ -26,7 +34,7 @@
                 <a href="#" class="nav__list-item__link">Art & Exhibitions</a>
             </li>
             <li class="nav__list-item">
-                <a href="#" class="nav__list-item__link">Biography</a>
+                <a href="biography.html" class="nav__list-item__link">Biography</a>
             </li>
             <li class="nav__list-item">
                 <a href="#" class="nav__list-item__link">Atelier / Studio</a>
@@ -47,101 +55,103 @@
 
     </header>
 
-    <section class="hero h-layout">
-        <div class="hero__img--container h-layout--right">
-            <img class="hero__img" src="static/media/hero_img.png" alt="Lupine sculpture">
-        </div>
-        
-
-        <div class="hero__content">
-            <h3>Docu film about Arne Quinze's artistic process</h3>
-            <h1>The Creation Of A Lupine Sculpture</h1>
-            <p class="hero__content--paragarph">After numerous sketches and studies with paint in the studio, after numerous paper models, after shaping the flower calyxes, after stacking and welding those cones, and after...</p>
-            <a class="hero__content--link" href="#">Learn more</a>
-        </div>
-    </section>
-
-    <section class="flex-container__homepage h-layout">
-        <div class="flex-container__homepage__title__container">
-            <h1 class="flex-container__homepage__title">Art & Exhibitions</h1>
-            <a class="flex-container__homepage__link" href="#">View all</a>
-        </div>
-
-       <ul class="art flex-container__homepage__list">
-             <!--
-            <li class="flex-container__homepage__list-item">
-                <img loading="lazy" class="flex-container__homepage__img" src="static/media/tijdelijk.jpg" alt="tijdelijk">
-                <h3>Sculpture - Liezele, Belgium</h3>
-                <h2>Purple Lupine sculpture</h2>
-                <p>This natural garden welcomes a new creature, with the artist's approving gaze. This Sculpture...</p>
-                <a class="flex-container__homepage__list-item__link" href="#">Learn more</a>
-            </li>
-
-            <li class="flex-container__homepage__list-item">
-                <img loading="lazy" class="flex-container__homepage__img" src="static/media/tijdelijk.jpg" alt="tijdelijk">
-                <h3>Sculpture - Liezele, Belgium</h3>
-                <h2>Purple Lupine sculpture</h2>
-                <p>This natural garden welcomes a new creature, with the artist's approving gaze. This Sculpture...</p>
-                <a class="flex-container__homepage__list-item__link" href="#">Learn more</a>
-            </li>
-
-            <li class="flex-container__homepage__list-item">
-                <img loading="lazy" class="flex-container__homepage__img" src="static/media/tijdelijk.jpg" alt="tijdelijk">
-                <h3>Sculpture - Liezele, Belgium</h3>
-                <h2>Purple Lupine sculpture</h2>
-                <p>This natural garden welcomes a new creature, with the artist's approving gaze. This Sculpture...</p>
-                <a class="flex-container__homepage__list-item__link" href="#">Learn more</a>
-            </li>
-            -->
-        </ul>
-    </section>
-
-    <section class="biography">
-        <div class="biography__img--container h-layout--left">
-            <img loading="lazy" class="biography__img" src="static/media/biography.png" alt="biography">
-        </div>
-
-        <div class="biography__content h-layout">
-            <h1>If only we could build our cities as balanced as nature's ecosystems...</h1>
-            <p class="biography__content__text">Our cities would be far more human. Arne Quinze continues to contest the greyness and dullness of the environments we live in. "Driven by the force of nature, I have the urge to guide our cities towards a better future. Since I was born in 1971, man has destroyed more than 30% of the world’s flora and fauna. To stop this terrible process, I believe the key is to make our living environments more human and green."</p>
-            <a class="biography__content__link" href="biography.html">Read full bio</a>
-        </div>
-    </section>
-
-    <section class="flex-container__homepage h-layout">
-        <div class="flex-container__homepage__title__container">
-            <h1 class="flex-container__homepage__title">Atelier - Studio</h1>
-            <a class="flex-container__homepage__link" href="#">View all</a>
-        </div>
-
-        <ul class="atelier flex-container__homepage__list">
-            <!--
-            <li class="flex-container__homepage__list-item">
-                <img loading="lazy" class="flex-container__homepage__img" src="static/media/atelier_1.jpg" alt="tijdelijk">
-                <h3>Sculpture - Liezele, Belgium</h3>
-                <h2>Purple Lupine sculpture</h2>
-                <p>This natural garden welcomes a new creature, with the artist's approving gaze. This Sculpture...</p>
-                <a class="flex-container__homepage__list-item__link" href="#">Learn more</a>
-            </li>
-
-            <li class="flex-container__homepage__list-item">
-                <img loading="lazy" class="flex-container__homepage__img" src="static/media/tijdelijk.jpg" alt="tijdelijk">
-                <h3>Sculpture - Liezele, Belgium</h3>
-                <h2>Purple Lupine sculpture</h2>
-                <p>This natural garden welcomes a new creature, with the artist's approving gaze. This Sculpture...</p>
-                <a class="flex-container__homepage__list-item__link" href="#">Learn more</a>
-            </li>
-
-            <li class="flex-container__homepage__list-item">
-                <img loading="lazy" class="flex-container__homepage__img" src="static/media/tijdelijk.jpg" alt="tijdelijk">
-                <h3>Sculpture - Liezele, Belgium</h3>
-                <h2>Purple Lupine sculpture</h2>
-                <p>This natural garden welcomes a new creature, with the artist's approving gaze. This Sculpture...</p>
-                <a class="flex-container__homepage__list-item__link" href="#">Learn more</a>
-            </li>
-            -->
-        </ul>
-    </section>
+    <main>
+        <section class="hero h-layout">
+            <div class="hero__img--container h-layout--right">
+                <img class="hero__img" src="static/media/hero_img.png" alt="Lupine sculpture">
+            </div>
+            
+    
+            <div class="hero__content">
+                <h3>Docu film about Arne Quinze's artistic process</h3>
+                <h1>The Creation Of A Lupine Sculpture</h1>
+                <p class="hero__content--paragarph">After numerous sketches and studies with paint in the studio, after numerous paper models, after shaping the flower calyxes, after stacking and welding those cones, and after...</p>
+                <a class="hero__content--link" href="#">Learn more</a>
+            </div>
+        </section>
+    
+        <section class="flex-container__homepage h-layout">
+            <div class="flex-container__homepage__title__container">
+                <h1 class="flex-container__homepage__title">Art & Exhibitions</h1>
+                <a class="flex-container__homepage__link" href="#">View all</a>
+            </div>
+    
+           <ul class="art flex-container__homepage__list">
+                 <!--
+                <li class="flex-container__homepage__list-item">
+                    <img loading="lazy" class="flex-container__homepage__img" src="static/media/tijdelijk.jpg" alt="tijdelijk">
+                    <h3>Sculpture - Liezele, Belgium</h3>
+                    <h2>Purple Lupine sculpture</h2>
+                    <p>This natural garden welcomes a new creature, with the artist's approving gaze. This Sculpture...</p>
+                    <a class="flex-container__homepage__list-item__link" href="#">Learn more</a>
+                </li>
+    
+                <li class="flex-container__homepage__list-item">
+                    <img loading="lazy" class="flex-container__homepage__img" src="static/media/tijdelijk.jpg" alt="tijdelijk">
+                    <h3>Sculpture - Liezele, Belgium</h3>
+                    <h2>Purple Lupine sculpture</h2>
+                    <p>This natural garden welcomes a new creature, with the artist's approving gaze. This Sculpture...</p>
+                    <a class="flex-container__homepage__list-item__link" href="#">Learn more</a>
+                </li>
+    
+                <li class="flex-container__homepage__list-item">
+                    <img loading="lazy" class="flex-container__homepage__img" src="static/media/tijdelijk.jpg" alt="tijdelijk">
+                    <h3>Sculpture - Liezele, Belgium</h3>
+                    <h2>Purple Lupine sculpture</h2>
+                    <p>This natural garden welcomes a new creature, with the artist's approving gaze. This Sculpture...</p>
+                    <a class="flex-container__homepage__list-item__link" href="#">Learn more</a>
+                </li>
+                -->
+            </ul>
+        </section>
+    
+        <section class="biography">
+            <div class="biography__img--container h-layout--left">
+                <img loading="lazy" class="biography__img" src="static/media/biography.png" alt="biography">
+            </div>
+    
+            <div class="biography__content h-layout">
+                <h1>If only we could build our cities as balanced as nature's ecosystems...</h1>
+                <p class="biography__content__text">Our cities would be far more human. Arne Quinze continues to contest the greyness and dullness of the environments we live in. "Driven by the force of nature, I have the urge to guide our cities towards a better future. Since I was born in 1971, man has destroyed more than 30% of the world’s flora and fauna. To stop this terrible process, I believe the key is to make our living environments more human and green."</p>
+                <a class="biography__content__link" href="biography.html">Read full bio</a>
+            </div>
+        </section>
+    
+        <section class="flex-container__homepage h-layout">
+            <div class="flex-container__homepage__title__container">
+                <h1 class="flex-container__homepage__title">Atelier - Studio</h1>
+                <a class="flex-container__homepage__link" href="#">View all</a>
+            </div>
+    
+            <ul class="atelier flex-container__homepage__list">
+                <!--
+                <li class="flex-container__homepage__list-item">
+                    <img loading="lazy" class="flex-container__homepage__img" src="static/media/atelier_1.jpg" alt="tijdelijk">
+                    <h3>Sculpture - Liezele, Belgium</h3>
+                    <h2>Purple Lupine sculpture</h2>
+                    <p>This natural garden welcomes a new creature, with the artist's approving gaze. This Sculpture...</p>
+                    <a class="flex-container__homepage__list-item__link" href="#">Learn more</a>
+                </li>
+    
+                <li class="flex-container__homepage__list-item">
+                    <img loading="lazy" class="flex-container__homepage__img" src="static/media/tijdelijk.jpg" alt="tijdelijk">
+                    <h3>Sculpture - Liezele, Belgium</h3>
+                    <h2>Purple Lupine sculpture</h2>
+                    <p>This natural garden welcomes a new creature, with the artist's approving gaze. This Sculpture...</p>
+                    <a class="flex-container__homepage__list-item__link" href="#">Learn more</a>
+                </li>
+    
+                <li class="flex-container__homepage__list-item">
+                    <img loading="lazy" class="flex-container__homepage__img" src="static/media/tijdelijk.jpg" alt="tijdelijk">
+                    <h3>Sculpture - Liezele, Belgium</h3>
+                    <h2>Purple Lupine sculpture</h2>
+                    <p>This natural garden welcomes a new creature, with the artist's approving gaze. This Sculpture...</p>
+                    <a class="flex-container__homepage__list-item__link" href="#">Learn more</a>
+                </li>
+                -->
+            </ul>
+        </section>
+    </main>
 
     <footer class="footer">
         <div class="footer__socials">
@@ -200,31 +210,31 @@
                     <ul class="footer__instagram__pics__list">
                         <li class="footer__instagram__pics__list-item">
                             <a target="_blank" href="https://www.instagram.com/p/CFcoMeWnjPU/" class="footer__instagram__link__pics__link">
-                                <img class="footer__instagram__link__pics__link-img" src="static/media/footer_instagram_1.jpg" alt="arne quinze instagram">
+                                <img loading="lazy" class="footer__instagram__link__pics__link-img" src="static/media/footer_instagram_1.jpg" alt="arne quinze instagram">
                             </a>
                         </li>
 
                         <li class="footer__instagram__pics__list-item">
                             <a target="_blank" href="https://www.instagram.com/p/CFcB1tzHKXS/" class="footer__instagram__link__pics__link">
-                                <img class="footer__instagram__link__pics__link-img" src="static/media/footer_instagram_2.jpg" alt="arne quinze instagram">
+                                <img loading="lazy" class="footer__instagram__link__pics__link-img" src="static/media/footer_instagram_2.jpg" alt="arne quinze instagram">
                             </a>
                         </li>
 
                         <li class="footer__instagram__pics__list-item">
                             <a target="_blank" href="https://www.instagram.com/p/CFaSKHQBBou/" class="footer__instagram__link__pics__link">
-                                <img class="footer__instagram__link__pics__link-img" src="static/media/footer_instagram_3.jpg" alt="arne quinze instagram">
+                                <img loading="lazy" class="footer__instagram__link__pics__link-img" src="static/media/footer_instagram_3.jpg" alt="arne quinze instagram">
                             </a>
                         </li>
 
                         <li class="footer__instagram__pics__list-item">
                             <a target="_blank" href="https://www.instagram.com/p/CFUzkLKHKHb/" class="footer__instagram__link__pics__link">
-                                <img class="footer__instagram__link__pics__link-img" src="static/media/footer_instagram_4.jpg" alt="arne quinze instagram">
+                                <img loading="lazy" class="footer__instagram__link__pics__link-img" src="static/media/footer_instagram_4.jpg" alt="arne quinze instagram">
                             </a>
                         </li>
 
                         <li class="footer__instagram__pics__list-item">
                             <a target="_blank" href="https://www.instagram.com/p/CFSJvo_nTa-/" class="footer__instagram__link__pics__link">
-                                <img class="footer__instagram__link__pics__link-img" src="static/media/footer_instagram_5.jpg" alt="arne quinze instagram">
+                                <img loading="lazy" class="footer__instagram__link__pics__link-img" src="static/media/footer_instagram_5.jpg" alt="arne quinze instagram">
                             </a>
                         </li>
                     </ul>
