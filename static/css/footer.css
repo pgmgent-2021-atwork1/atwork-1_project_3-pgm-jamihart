@@ -28,6 +28,12 @@
   transition: all 0.2s ease;
 }
 
+@media (min-width: 48rem) {
+  .footer__socials__list__link {
+    margin-bottom: 0rem;
+  }
+}
+
 .footer__socials__list__link:hover {
   color: #003cff;
 }
@@ -40,4 +46,125 @@
 
 .footer__container__bottom {
   background-color: #e6e6e6;
+}
+
+.footer__form {
+  padding: 3.75rem 0;
+}
+
+.footer__form__label {
+  display: block;
+  font-size: 1.75rem;
+}
+
+.footer__form__input {
+  background-color: transparent;
+  border: 1px solid rgb(0,0,0,0.2);
+  color: rgb(0,0,0,0.2);
+  width: calc(100% - 1rem);
+  padding: 0.75rem 0.5rem;
+  font-size: 1.05rem;
+  margin-top: 1rem;
+}
+
+@media (min-width: 48rem) {
+  .footer__form__input {
+    max-width: 25%;
+  }
+}
+
+@media (min-width: 48rem) {
+  .footer__instagram {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.footer__instagram__title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+}
+
+@media (min-width: 48rem) {
+  .footer__instagram__title {
+    width: 100%;
+  }
+}
+
+.footer__instagram__link__text {
+  font-size: 1.75rem;
+  line-height: 1.2;
+  margin: 0;
+  margin-top: 0.5rem;
+  width: 8rem;
+  transition: all 0.2s ease;
+}
+
+.footer__instagram__link__text:hover {
+  color: #003cff;
+}
+
+@media (min-width: 48rem) {
+  .footer__instagram__pics {
+   margin-left: 6.25rem;
+  }
+}
+
+.footer__instagram__pics__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.footer__instagram__pics__list-item {
+  width: calc(50% - 0.5rem);
+  margin-bottom: 0.5em;
+}
+
+@media (min-width: 48rem) {
+  .footer__instagram__pics__list-item {
+    width: calc(20% - 0.5rem);
+  }
+}
+
+.footer__instagram__link__pics__link-img {
+  width: 100%;
+}
+
+.footer__bottom__rights-reserved {
+  padding: 4rem 0;
+}
+
+@media (min-width: 48rem) {
+  .footer__bottom__rights-reserved {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.footer__bottom__rights_reserved--text,
+.footer__bottom__rights_reserved--links {
+  font-size: 0.75rem;
+  margin: 0;
+}
+
+.footer__bottom__rights_reserved--links a {
+  transition: all 0.2s ease;
+} 
+
+.footer__bottom__rights_reserved--links a:hover {
+  color: #003cff;
+  border-bottom: 1px solid #003cff;
+}
+
+.footer__bottom__rights_reserved--links a::after {
+  content: ' —';
+  border-bottom: 2px solid #e6e6e6;
+}
+
+.footer__bottom__rights_reserved--links a:last-child::after {
+  content: '';
 }
