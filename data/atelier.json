@@ -1,0 +1,25 @@
+{
+    "atelier": [
+      {
+      "thumbnail": "static/media/atelier_1.jpg",
+      "sculpture": "From sketch to sculpture",
+      "title": "Strelitzia step by step",
+      "description": "Strelitzia flowers stand out in both expressive form ànd expressive colour. Having such a spiky...",
+      "link": "Learn more"
+      },
+      {
+      "thumbnail": "static/media/atelier_2.gif",
+      "sculpture": "Welcome to Antwerp",
+      "title": "How a massive Lupine Tower budded in the garden of an art collector",
+      "description": "After numerous sketches and studies with paint in the studio, after shaping the flower calyxes,...",
+      "link": "Learn more"
+      },
+      {
+      "thumbnail": "static/media/atelier_3.gif",
+      "sculpture": "The creative process of imaging a sculpture",
+      "title": "The Lupine Studies, by Arne Quinze",
+      "description": "See how Arne Quinze's sculpture comes to life in his studio after many studies and versions. This...",
+      "link": "Learn more"
+      }
+    ]
+}
