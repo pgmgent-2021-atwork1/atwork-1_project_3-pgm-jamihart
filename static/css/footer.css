@@ -1,6 +1,13 @@
 .footer__socials {
   border-top: 1px solid #e6e6e6;
-  padding: 3rem 0;
+  padding: 1.5rem 0;
+}
+
+@media (min-width: 48rem) {
+  .footer__socials {
+    border-top: 1px solid #e6e6e6;
+    padding: 3rem 0;
+  }
 }
 
 .footer__socials__list {

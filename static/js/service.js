@@ -23,3 +23,18 @@ function AtelierApi () {
     }
   };
 }
+
+function ContactTimeInBe () {
+  this.timeInBeDigits = function (nmbr, amnt) {
+    let str = String(nmbr);
+    while (str.length < amnt) {
+      str = `0${str}`;
+    }
+    return str;
+  };
+  this.timeInBeString = function (utc, Country) {
+    const time = new Date();
+    time.setHours(time.getHours() + utc + time.getTimezoneOffset() / 60);
+    return `<p>Time in belgium ${this.timeInBeDigits(time.getHours(), 2)}:${this.timeInBeDigits(time.getMinutes(), 2)}</p>`;
+  };
+}

@@ -34,6 +34,12 @@ h3 {
   color: #787878;
 }
 
+h4 {
+  font-size: 1.3125rem;
+  margin: 0;
+  margin-bottom: 1rem;
+}
+
 p {
   line-height: 1.5;
   font-size: 1.3125rem;
