@@ -43,3 +43,26 @@
     text-align: right;
   }
 }
+
+.detail__gallery {
+  margin-top: 7.5rem;
+}
+
+@media (min-width: 48rem) {
+  .detail__gallery__flex {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -2rem;
+    align-items: center;
+  }
+
+  .detail__gallery__list-item {
+    margin: 0 2rem;
+    width: calc(33% - 4rem);
+  }
+}
+
+.detail__gallery__img {
+  width: 100%;
+  margin-bottom: 2.5rem;
+}

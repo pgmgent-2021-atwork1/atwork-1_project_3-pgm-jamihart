@@ -12,6 +12,11 @@
   margin-bottom: 2.5rem;
 }
 
+.flex-container__homepage__title--detail-atelier {
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
 @media (min-width: 64rem) {
   .flex-container__homepage__title__container {
     position: absolute;
