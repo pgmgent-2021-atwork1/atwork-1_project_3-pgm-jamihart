@@ -14,6 +14,23 @@
   border-bottom: 2px solid #003cff;
 }
 
+.detail__hero__media-container--iframe {
+  margin: 0 auto;
+  margin-bottom: 2rem;
+  width: 100%;
+  max-width: 100%; 
+  padding-bottom: calc(495/880 * 100%);
+  position: relative;
+}
+
+.detail__hero__media-container--iframe iframe {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  right: 0;
+}
+
 .detail__hero__img {
   width: 100%;
 }
@@ -25,6 +42,34 @@
 .detail__content__date {
   color: #787878;
   font-size: 0.875rem;
+}
+
+.detail__content__date--docu {
+  color: #787878;
+  font-size: 0.875rem;
+}
+
+.detail__content__date--docu::before {
+  content: ' — ';
+}
+
+.reference {
+  margin: 1rem 0;
+}
+
+.reference span {
+  color: #787878;
+  font-size: 0.875rem;
+  display: block;
+}
+
+.detail__content__date--link {
+  text-decoration: underline;
+  transition: all 0.2s ease;
+}
+
+.detail__content__date--link:hover {
+  color: #003cff;
 }
 
 @media (min-width: 48rem) {
