@@ -154,7 +154,11 @@
             <div class="footer__form">
                 <form action="" method="get">
                     <label class="footer__form__label" for="email">Stay informed</label>
-                    <input class="footer__form__input" name="email" type="email" placeholder="e-mail" required pattern="/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/">
+                    <div class="footer__form__flex">
+                        <input class="footer__form__input" name="email" type="email" placeholder="e-mail" required pattern="/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/">
+                        <button class="footer__form__button">Subscribe</button>
+                    </div>
+                    
                 </form>      
             </div>
 
@@ -211,6 +215,7 @@
     </footer>
     
     <script src="static/js/service.js"></script>
-    <script src="static/js/contact__time.js"></script>
+    <script src="static/js/contact_time.js"></script>
+    <script src="static/js/footer_email_btn.js"></script>
 </body>
 </html>

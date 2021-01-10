@@ -16,6 +16,7 @@
       this.$contactInfoTimeStudio.innerHTML = contactTimeInBe;
       console.log(contactTimeInBe);
     },
+
   };
   app.initialize();
 })();

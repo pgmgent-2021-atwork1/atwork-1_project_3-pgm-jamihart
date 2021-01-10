@@ -64,20 +64,48 @@
   font-size: 1.75rem;
 }
 
+.footer__form__flex {
+  display: flex;
+  align-items: center;
+  border: 1px solid rgb(0,0,0,0.2);
+  margin-top: 1rem;
+  justify-content: space-between;
+}
+
+@media (min-width: 48rem) {
+  .footer__form__flex {
+    max-width: 25%;
+  }
+}
+
+.footer__form__button {
+  border: none;
+  background-color: #003cff00;
+  color: #003cff00;
+  font-weight: bold;
+  font-size: 0.9rem;
+  margin: 0;
+  margin-right: 0.5rem;
+  padding: 0;
+  cursor: pointer;
+  transition: all 0.5s ease-in;
+}
+
+.footer__form__button--active {
+  color: #003cff;
+}
+
 .footer__form__input {
   background-color: transparent;
-  border: 1px solid rgb(0,0,0,0.2);
+  border: 0px solid rgb(0,0,0,0.2);
   color: rgb(0,0,0,0.2);
   width: calc(100% - 1rem);
   padding: 0.75rem 0.5rem;
   font-size: 1.05rem;
-  margin-top: 1rem;
 }
 
-@media (min-width: 48rem) {
-  .footer__form__input {
-    max-width: 25%;
-  }
+.footer__form__input:focus {
+  outline: none;
 }
 
 @media (min-width: 48rem) {
