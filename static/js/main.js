@@ -9,7 +9,7 @@
 
     cacheElements () {
       this.$art = document.querySelector('.art');
-      this.$atelier = document.querySelector('.atelier')
+      this.$atelierHomepage = document.querySelector('.atelier__homepage');
     },
 
     eventListerners () {
@@ -29,7 +29,7 @@
           myStr += `
             <li class="flex-container__homepage__list-item">
                 <img loading="lazy" class="flex-container__homepage__img" src="static/img/${art[i].cover}" alt="${art[i].title}">
-                <h3>${art[i].tags} - ${art[i].location}</h3>
+                <span>${art[i].tags} - ${art[i].location}</span>
                 <h2>${art[i].title}</h2>
                 <p>${art[i].description}</p>
                 <a class="flex-container__homepage__list-item__link" href="#">Learn more</a>
@@ -43,24 +43,24 @@
     async fetchAtelierApi () {
       const atelierApi = new AtelierApi();
       const atelierData = await atelierApi.getatelierApi();
-      this.updateAtelierUi(atelierData);
+      this.updateAtelierHomepageUi(atelierData);
     },
 
-    updateAtelierUi (atelierData) {
+    updateAtelierHomepageUi (atelierData) {
       //console.log(atelierData.atelier);
       let myStr = '';
       for (let i = 0; i < 3; i++) {
         myStr += `
         <li class="flex-container__homepage__list-item">
           <img loading="lazy" class="flex-container__homepage__img" src="${atelierData.atelier[i].thumbnail}" alt="${atelierData.atelier[i].title}">
-          <h3>${atelierData.atelier[i].sculpture}</h3>
+          <span>${atelierData.atelier[i].sculpture}</span>
           <h2>${atelierData.atelier[i].title}</h2>
           <p>${atelierData.atelier[i].description}</p>
           <a class="flex-container__homepage__list-item__link" href="#">Learn more</a>
         </li>
         `
       }
-      this.$atelier.innerHTML = myStr;
+      this.$atelierHomepage.innerHTML = myStr;
     },
   };
   app.initialize();

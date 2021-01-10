@@ -1,0 +1,45 @@
+.detail__hero__link {
+  display: block;
+  width: 10.2rem;
+  margin-left: auto;
+  line-height: 1.5;
+  font-size: 1.3125rem;
+  margin-bottom: 1rem;
+  transition: all 0.2s ease;
+  border-bottom: 2px solid #003cff00;
+}
+
+.detail__hero__link:hover {
+  color: #003cff;
+  border-bottom: 2px solid #003cff;
+}
+
+.detail__hero__img {
+  width: 100%;
+}
+
+.detail__content {
+  margin-top: 3.75rem;
+}
+
+.detail__content__date {
+  color: #787878;
+  font-size: 0.875rem;
+}
+
+@media (min-width: 48rem) {
+  .flex-container__detail__content {
+    display: flex;
+    align-items: flex-start;
+  }
+
+  .detail__content__paragraph {
+    width: 66%;
+  }
+
+  .detail__content__date {
+    width: 33%;
+    margin-top: 1.3125rem;
+    text-align: right;
+  }
+}

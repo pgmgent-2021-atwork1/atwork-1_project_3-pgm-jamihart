@@ -43,6 +43,7 @@
     justify-content: space-between;
     align-items: center;
     margin: 0 -1rem;
+    flex-wrap: wrap;
   } 
 }
 
@@ -66,6 +67,21 @@
 .flex-container__homepage__img {
   width: 100%;
   margin-bottom: 2rem;
+}
+
+.flex-container__homepage__list-item--atelier {
+  margin-bottom: 4rem;
+}
+
+@media (min-width: 48rem) {
+  .flex-container__homepage__list-item--atelier {
+    width: 25%;
+  }
+
+  .flex-container__homepage__list-item--atelier:nth-child(3n+2) {
+    margin: 4rem;
+    margin-bottom: 4rem;
+   }
 }
 
 .flex-container__homepage__list-item__link {
