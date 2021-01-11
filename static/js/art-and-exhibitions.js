@@ -42,7 +42,7 @@
       //console.log(params.has('category'));
 
       const urlCategory = params.get('category');
-      //console.log(urlCategory);
+      console.log(urlCategory);
 
       if (urlCategory !== null) {
         const categoriesParam = this.art.filter((ctgParam) => {
@@ -64,12 +64,11 @@
             return `<li class="articles" data-year="${articles.year}">${articles.title}</li>`
           }).join('');
 
-          console.log(articleList)
-
           return `
+          <h1></h1>
           <ul class="art__list">${articleList}</ul>
           `
-
+          
           
         }).join('');
         this.$art.innerHTML = tempStr;
@@ -81,7 +80,8 @@
 
         const tempStr = this.art.map((articlesAll) => {
           //console.log(articlesAll.year);
-          return `<li class="articles" data-year="${articlesAll.year}">${articlesAll.title}</li>`
+          return `
+          <li class="articles" data-year="${articlesAll.year}">${articlesAll.title}</li>`
         }).join('');
         this.$art.innerHTML = tempStr;
 
@@ -89,15 +89,25 @@
     },
 
     filterYears (year) {
+      const $articlesInHTML = this.$art.querySelectorAll('li.articles');
       this.$artList = document.querySelector('.art__list');
       console.log(this.$artList)
-      const $articlesInHTML = this.$artList.querySelectorAll('.articles');
-      console.log($articlesInHTML);
+      
+      //console.log($articlesInHTML);
       $articlesInHTML.forEach(($article, index) => {
-        console.log($article)
+        //console.log($article)
         const articleYear = $article.dataset.year;
-        console.log(articleYear);
-        
+        //console.log(articleYear);
+          if (year !== 'all') {
+            if (year === articleYear) {
+              $article.classList.remove('hidden');
+            } else {
+              $article.classList.add('hidden');
+            }
+          } else {
+            $article.classList.remove('hidden');
+          }
+          //console.log(articleYear)
       });
     }
   };
