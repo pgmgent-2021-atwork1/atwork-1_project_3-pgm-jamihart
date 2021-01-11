@@ -2,12 +2,22 @@
   const app = {
     initialize () {
       this.cacheElements();
+      this.clickEventListerners();
       this.fetchCategoryApi();
       this.fetchArtApi();
     },
 
     cacheElements () {
       this.$art = document.querySelector('.art');
+      this.$yearFilter = document.querySelectorAll('.year--filter');
+    },
+
+    clickEventListerners () {
+      this.$yearFilter.forEach(($filterYear) => {
+        $filterYear.addEventListener('click', (event) => {
+          this.filterYears(event.target.dataset.year);
+        });
+      });
     },
 
     async fetchCategoryApi () {
@@ -25,14 +35,14 @@
     },
 
     updateArtUi () {
-      console.log(this.categories);
-      console.log(this.art);
+      //console.log(this.categories);
+      //console.log(this.art);
       const search = window.location.search;
       const params = new URLSearchParams(search);
-      console.log(params.has('category'));
+      //console.log(params.has('category'));
 
       const urlCategory = params.get('category');
-      console.log(urlCategory);
+      //console.log(urlCategory);
 
       if (urlCategory !== null) {
         const categoriesParam = this.art.filter((ctgParam) => {
@@ -45,17 +55,19 @@
         const tempStr = this.categories.map((cat) => {
           
           const categoryFilter = categoriesParam.filter((artFiltered) => {
-            console.log(artFiltered.tags.indexOf(cat))
+            //console.log(artFiltered.tags.indexOf(cat))
             return artFiltered.tags.indexOf(cat) > -1;
           })
 
           const articleList = categoryFilter.map((articles) => {
-            console.log(articles.title);
-            return `<li>${articles.title}</li>`
+            //console.log(articles.title);
+            return `<li class="articles" data-year="${articles.year}">${articles.title}</li>`
           }).join('');
 
+          console.log(articleList)
+
           return `
-          <ul>${articleList}</ul>
+          <ul class="art__list">${articleList}</ul>
           `
 
           
@@ -65,15 +77,29 @@
 
       
       } else {
-        console.log(this.art);
+        //console.log(this.art);
 
         const tempStr = this.art.map((articlesAll) => {
-          //console.log(articlesAll.title);
-          return `<li>${articlesAll.title}</li>`;
-        }).join('')
+          //console.log(articlesAll.year);
+          return `<li class="articles" data-year="${articlesAll.year}">${articlesAll.title}</li>`
+        }).join('');
         this.$art.innerHTML = tempStr;
+
       }
     },
+
+    filterYears (year) {
+      this.$artList = document.querySelector('.art__list');
+      console.log(this.$artList)
+      const $articlesInHTML = this.$artList.querySelectorAll('.articles');
+      console.log($articlesInHTML);
+      $articlesInHTML.forEach(($article, index) => {
+        console.log($article)
+        const articleYear = $article.dataset.year;
+        console.log(articleYear);
+        
+      });
+    }
   };
   app.initialize();
 })();
