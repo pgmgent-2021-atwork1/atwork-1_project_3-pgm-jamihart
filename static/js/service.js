@@ -38,3 +38,16 @@ function ContactTimeInBe () {
     return `<p>Time in belgium ${this.timeInBeDigits(time.getHours(), 2)}:${this.timeInBeDigits(time.getMinutes(), 2)}</p>`;
   };
 }
+
+function CategoryApi () {
+  this.getCategoryApi = async () => {
+    this.CATEGORY_API = '../data/categories.json';
+    try {
+      const response = await fetch(this.CATEGORY_API);
+      const jsonData = await response.json();
+      return jsonData;
+    } catch (error) {
+      console.error(error);
+    }
+  };
+}
