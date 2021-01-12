@@ -13,7 +13,7 @@ function ArtApi () {
 
 function AtelierApi () {
   this.getatelierApi = async () => {
-    this.ATELIER_API = './data/atelier.json';
+    this.ATELIER_API = 'data/atelier.json';
     try {
       const response = await fetch(this.ATELIER_API);
       const jsonData = await response.json();
@@ -41,7 +41,7 @@ function ContactTimeInBe () {
 
 function CategoryApi () {
   this.getCategoryApi = async () => {
-    this.CATEGORY_API = '../data/categories.json';
+    this.CATEGORY_API = 'data/categories.json';
     try {
       const response = await fetch(this.CATEGORY_API);
       const jsonData = await response.json();

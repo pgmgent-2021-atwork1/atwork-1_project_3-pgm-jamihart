@@ -33,7 +33,7 @@ const PRESS_API = '../data/press.json';
             <span>${article.title}</span>
             <h2>${article.place}</h2>
             <p>${article.description}</p>
-            <a class="flex-container__homepage__list-item__link" href="#">${article.call_to_action}</a>
+            <a class="flex-container__homepage__list-item__link" href="my-secret-garden-valencia/index.html">${article.call_to_action}</a>
           </li>
           `;
         }
@@ -53,7 +53,7 @@ const PRESS_API = '../data/press.json';
             <span>${article.title}</span>
             <h2>${article.place}</h2>
             <p>${article.description}</p>
-            <a class="flex-container__homepage__list-item__link" href="#">${article.call_to_action}</a>
+            <a class="flex-container__homepage__list-item__link" href="my-secret-garden-valencia/index.html">${article.call_to_action}</a>
           </li>
           `;
         }

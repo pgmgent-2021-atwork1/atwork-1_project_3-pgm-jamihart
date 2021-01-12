@@ -42,7 +42,7 @@
       //console.log(params.has('category'));
 
       const urlCategory = params.get('category');
-      console.log(urlCategory);
+      //console.log(urlCategory);
 
       if (urlCategory !== null) {
         const categoriesParam = this.art.filter((ctgParam) => {
@@ -77,6 +77,8 @@
       
       } else {
         //console.log(this.art);
+
+        
 
         const tempStr = this.art.map((articlesAll) => {
           //console.log(articlesAll.year);

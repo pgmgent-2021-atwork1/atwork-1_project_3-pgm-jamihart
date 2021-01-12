@@ -1,4 +1,4 @@
-const ATELIER_API = '../data/atelier.json';
+/*const ATELIER_API = 'data/atelier.json';
 
 (() => {
   const app = {
@@ -28,11 +28,11 @@ const ATELIER_API = '../data/atelier.json';
           <span>${project.sculpture}</span>
           <h2>${project.title}</h2>
           <p>${project.description}</p>
-          <a class="flex-container__homepage__list-item__link" href="visiting-mons-again/index.html">Learn more</a>
+          <a class="flex-container__homepage__list-item__link" href="atelier-studio/visiting-mons-again/index.html">Learn more</a>
         </li>
         `
       }).join('');
     }
   }
   app.initialize();
-})();
+})();*/
