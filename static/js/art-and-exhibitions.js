@@ -27,6 +27,13 @@
       this.updateArtUi();
     },
 
+    async fetchYearsApi () {
+      const yearsApi = new YearsApi();
+      const years = await yearsApi.getYearsApi();
+      this.years = years;
+      this.updateArtUi();
+    },
+
     async fetchArtApi () {
       const artApi = new ArtApi();
       const art = await artApi.getartApi();
@@ -61,7 +68,7 @@
 
           const articleList = categoryFilter.map((articles) => {
             //console.log(articles.title);
-            return `<li class="articles" data-year="${articles.year}">${articles.title}</li>`
+            return `<li class="articles" data-year="${articles.year}">${articles.year} - ${articles.title}</li>`
           }).join('');
 
           return `
@@ -83,7 +90,7 @@
         const tempStr = this.art.map((articlesAll) => {
           //console.log(articlesAll.year);
           return `
-          <li class="articles" data-year="${articlesAll.year}">${articlesAll.title}</li>`
+          <li class="articles" data-year="${articlesAll.year}">${articlesAll.year} - ${articlesAll.title}</li>`
         }).join('');
         this.$art.innerHTML = tempStr;
 

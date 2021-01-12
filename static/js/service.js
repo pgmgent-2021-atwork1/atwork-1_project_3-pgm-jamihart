@@ -64,3 +64,16 @@ function CategoryApi () {
     }
   };
 }
+
+function YearsApi () {
+  this.getYearsApi = async () => {
+    this.YEARS_API = 'data/years.json';
+    try {
+      const response = await fetch(this.YEARS_API);
+      const jsonData = await response.json();
+      return jsonData;
+    } catch (error) {
+      console.error(error);
+    }
+  };
+}
