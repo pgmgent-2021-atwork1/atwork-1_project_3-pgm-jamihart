@@ -1,4 +1,4 @@
-const PRESS_API = '../data/press.json';
+const PRESS_API = 'data/press.json';
 
 (() => {
   const app = {
@@ -10,17 +10,14 @@ const PRESS_API = '../data/press.json';
       this.$pressReleases = document.querySelector('.press__releases');
       this.$inThePress = document.querySelector('.in-the-press');
     },
+
     async fetchPressApi () {
-      try {
-        const response = await fetch(PRESS_API);
-        const jsonData = await response.json();
-        this.updatePressReleasesUi(jsonData);
-        this.updateInThePressUi(jsonData);
-      } catch(error) {
-        console.error(error);
-      }
-      
+      const pressApi = new PressApi();
+      const press = await pressApi.getPressApi();
+      this.updatePressReleasesUi(press);
+      this.updateInThePressUi(press);
     },
+
     updatePressReleasesUi (data) {
       console.log(data);
       let tempStr = '';
@@ -33,7 +30,7 @@ const PRESS_API = '../data/press.json';
             <span>${article.title}</span>
             <h2>${article.place}</h2>
             <p>${article.description}</p>
-            <a class="flex-container__homepage__list-item__link" href="my-secret-garden-valencia/index.html">${article.call_to_action}</a>
+            <a class="flex-container__homepage__list-item__link" href="press/my-secret-garden-valencia/index.html">${article.call_to_action}</a>
           </li>
           `;
         }
@@ -53,7 +50,7 @@ const PRESS_API = '../data/press.json';
             <span>${article.title}</span>
             <h2>${article.place}</h2>
             <p>${article.description}</p>
-            <a class="flex-container__homepage__list-item__link" href="my-secret-garden-valencia/index.html">${article.call_to_action}</a>
+            <a class="flex-container__homepage__list-item__link" href="press/my-secret-garden-valencia/index.html">${article.call_to_action}</a>
           </li>
           `;
         }

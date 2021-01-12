@@ -24,6 +24,19 @@ function AtelierApi () {
   };
 }
 
+function PressApi () {
+  this.getPressApi = async () => {
+    this.PRESS_API = 'data/press.json';
+    try {
+      const response = await fetch(this.PRESS_API);
+      const jsonData = await response.json();
+      return jsonData;
+    } catch (error) {
+      console.error(error);
+    }
+  };
+}
+
 function ContactTimeInBe () {
   this.timeInBeDigits = function (nmbr, amnt) {
     let str = String(nmbr);
