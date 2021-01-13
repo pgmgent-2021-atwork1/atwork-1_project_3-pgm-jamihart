@@ -74,7 +74,7 @@
       this.$atelier.innerHTML = atelierData.atelier.map(project => {
         return `
         <li class="flex-container__homepage__list-item--atelier">
-          <img loading="lazy" class="flex-container__homepage__img" src="../${project.thumbnail}" alt="${project.title}">
+          <img loading="lazy" class="flex-container__homepage__img" src="${project.thumbnail}" alt="${project.title}">
           <span>${project.sculpture}</span>
           <h2>${project.title}</h2>
           <p>${project.description}</p>
