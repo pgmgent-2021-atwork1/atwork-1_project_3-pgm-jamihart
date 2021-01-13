@@ -33,6 +33,7 @@
       const years = await yearsApi.getYearsApi();
       this.years = years;
       this.getHTMLForYearsList();
+      this.updateArtUi();
     },
 
     async fetchArtApi () {
@@ -44,7 +45,7 @@
 
     updateArtUi () {
       //console.log(this.categories);
-      //console.log(this.art);
+      console.log(this.years);
       const search = window.location.search;
       const params = new URLSearchParams(search);
       //console.log(params.has('category'));
@@ -53,6 +54,8 @@
       //console.log(urlCategory);
 
       if (urlCategory !== null) {
+
+        //let tempStr = '';
         const categoriesParam = this.art.filter((ctgParam) => {
           for (let i = 0; i < ctgParam.tags.length; i++) {
             //console.log(ctgParam.tags[i] === urlCategory);
@@ -60,26 +63,30 @@
           }
         });
 
-        const tempStr = this.categories.map((cat) => {
-          
-          const categoryFilter = categoriesParam.filter((artFiltered) => {
-            //console.log(artFiltered.tags.indexOf(cat))
-            return artFiltered.tags.indexOf(cat) > -1;
+        let tempStr = '';
+        
+        console.log(categoriesParam)
+        tempStr = this.years.map((yr) => {
+          const yearsFilter = categoriesParam.filter(yrFiltered => {
+            return yrFiltered.year.indexOf(yr) > -1;
           })
 
-          const articleList = categoryFilter.map((articles) => {
-            //console.log(articles.title);
+          
+          
+          const articleList = yearsFilter.map((articles) => {
+            //console.log(articles.year);
             return `<li class="articles" data-year="${articles.year}">${articles.year} - ${articles.title}</li>`
           }).join('');
 
           return `
-          <h1></h1>
+          <h1>${yr}</h1>
           <ul class="art__list">${articleList}</ul>
           `
-          
-          
         }).join('');
+
         this.$art.innerHTML = tempStr;
+
+        
 
 
       
