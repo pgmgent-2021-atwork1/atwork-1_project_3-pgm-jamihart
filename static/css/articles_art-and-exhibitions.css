@@ -1,7 +1,159 @@
-.articles.hidden {
-  display: none;
+@media (min-width: 48rem) {
+  .filter {
+    display: flex;
+    align-items: flex-end;
+  }
+
+  .filter__container {
+    width: 66%;
+  }
+}
+
+.categories__list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 2.5rem;
+}
+
+.categories__list-item {
+  padding-right: 1.5rem;
+  font-size: 1.125rem;
+  line-height: 1.5;
+}
+
+.categories__list-item a:hover {
+  color: #003cff;
+}
+
+.year__filter__list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 0.5rem;
+}
+
+.year__filter__list-item {
+  padding-right: 1.5rem;
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+
+.year__filter__list-item a:hover {
+  color: #003cff;
+}
+
+@media (min-width: 48rem) {
+  .viewmode {
+    margin-left: auto;
+  }
+}
+
+.viewmode__btn {
+  border: none;
+  background: none;
+  padding: 0;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  margin-top: 0.5rem;
+  cursor:pointer;
+}
+
+.viewmode__btn:hover {
+  color: #003cff;
+}
+
+.viewmode_btn--list {
+  border-bottom: 1px solid black;
+  margin-right: 1rem;
+}
+
+.viewmode__btn:hover.viewmode_btn--list {
+  border-bottom: 1px solid #003cff;
+}
+
+.art {
+  margin-top: 10rem;
+  margin-bottom: 13.75rem;
 }
 
 .art__list {
-  margin-bottom: 2rem;
+  margin-bottom: 10rem;
 }
+
+.art_article {
+  margin-bottom: 3.75rem;
+}
+
+@media (min-width: 48rem) {
+  .art__container {
+    display: flex;
+  }
+}
+
+@media (min-width: 48rem) {
+  .art__content {
+    width: 33%;
+    text-align: right;
+    margin-right: 6.25rem;
+  }
+}
+
+.art__content__year {
+  margin-bottom: 2rem;
+  font-size: 1.75rem;
+  display: block;
+}
+
+@media (min-width: 48rem) {
+  .art__content__time {
+    width: calc(33% - 1.5625rem);
+    text-align: right;
+  }
+}
+
+.art__content_subtitle {
+  font-size: 1.125rem;
+  font-weight: normal;
+  margin: 0.5rem 0;
+}
+
+.art_images__container {
+  margin-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+@media (min-width: 48rem) {
+  .art_images__container {
+    width: 66%;
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+  }
+
+  .art_images__container::-webkit-scrollbar {
+    height: 0.5rem;
+    background-color: #79595900;
+  }
+
+  .art_images__container::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+    background-color: #555;
+  }
+}
+
+.art__img {
+  margin-right: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+@media (min-width: 48rem) {
+  .art__img {
+    margin-right: 2.5rem;
+    margin-bottom: 0.75rem;
+  }
+}
+
+
+
+

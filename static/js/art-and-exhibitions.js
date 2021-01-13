@@ -10,7 +10,7 @@
 
     cacheElements () {
       this.$art = document.querySelector('.art');
-      this.$yearFilter = document.querySelectorAll('.year--filter');
+      this.$yearFilter = document.querySelectorAll('.year__filter__list');
     },
 
     // clickEventListerners () {
@@ -64,48 +64,77 @@
         });
 
         let tempStr = '';
-        
+
         console.log(categoriesParam)
         tempStr = this.years.map((yr) => {
           console.log(yr)
           const yearsFilter = categoriesParam.filter(yrFiltered => {
             return yrFiltered.year.indexOf(yr) > -1;
           });
-          
+
           const articleList = yearsFilter.map((articles) => {
             //console.log(articles.year);
-            return `<li class="articles" data-year="${articles.year}">${articles.year} - ${articles.title}</li>`
+            return `
+            <li class="art_article" data-year="${articles.year}">
+               <div class="art__container">
+                 <div class="art__content">
+                     <a href=""><h2>${articles.title}</h2></a>
+                     <h3 class="art__content_subtitle">${articles.subtitle}</h3>
+                     <span>${articles.tags} — ${articles.location}</span>
+                 </div>
+                 <ul class="art_images__container">
+                     ${this.loopImagesArt(articles.images)}
+                 </ul>
+               </div>
+             </li>
+            `
           }).join('');
 
           return `
-          <h1 id="${yr}">${yr}</h1>
+          <div class="art__content__time">
+            <time class="art__content__year" id="${yr}">${yr}</time>
+          </div>
           <ul class="art__list">${articleList}</ul>
           `
         }).join('');
 
         this.$art.innerHTML = tempStr;
-      
+
       } else {
         let tempStr = '';
-        
-        console.log(this.art)
+
+        //console.log(this.art)
         tempStr = this.years.map((yr) => {
-          console.log(yr)
+          //console.log(yr)
           const yearsFilter = this.art.filter(yrFiltered => {
             return yrFiltered.year.indexOf(yr) > -1;
           });
 
-          //console.log(yearsFilter)
-          
           const articleList = yearsFilter.map((articles) => {
+            //console.log(articles.images)
             //console.log(articles.year);
-            return `<li class="articles" data-year="${articles.year}">${articles.year} - ${articles.title}</li>`
+            return `
+            <li class="art_article" data-year="${articles.year}">
+               <div class="art__container">
+                 <div class="art__content">
+                     <a href=""><h2>${articles.title}</h2></a>
+                     <h3 class="art__content_subtitle">${articles.subtitle}</h3>
+                     <span>${articles.tags} — ${articles.location}</span>
+                 </div>
+                 <ul class="art_images__container">
+                     ${this.loopImagesArt(articles.images)}
+                 </ul>
+               </div>
+             </li>
+             `;
           }).join('');
 
-          console.log(articleList)
+          //console.log(articleList)
 
           return `
-          <h1 id="${yr}">${yr}</h1>
+          <div class="art__content__time">
+            <time class="art__content__year" id="${yr}">${yr}</time>
+          </div>
           <ul class="art__list">${articleList}</ul>
           `
         }).join('');
@@ -120,21 +149,33 @@
       console.log(search)
       const tempStr = this.years.map((year) => {
         return  `
-        <li>
+        <li class="year__filter__list-item">
           <a href="art-and-exhibitions/index.html${search}#${year}" data-year="${year}">${year}</a>
         </li>
         `;
       }).join('');
 
-      document.querySelector('.year--filter').innerHTML = tempStr;
-      
+      document.querySelector('.year__filter__list').innerHTML = tempStr;
+
+    },
+
+    loopImagesArt (articleImages) {
+      let tempStr = '';
+      tempStr = articleImages.map((artImg) => {
+        return `
+        <li>
+          <a href="art-and-exhibitions/in-dialogue-with-calatrava/index.html"><img class="art__img" src="static/img/${artImg}" alt="Art & Exhibitions" loading="lazy"></a>
+        </li>
+        `;
+      });
+      return tempStr;
     },
 
     // filterYears (year) {
     //   this.$artList = document.querySelector('.art__list');
     //   const $articlesInHTML = this.$art.querySelectorAll('li.articles');
     //   console.log(this.$artList)
-      
+
     //   //console.log($articlesInHTML);
     //   $articlesInHTML.forEach(($article, index) => {
     //     //console.log($article)
