@@ -4,6 +4,7 @@
       this.cacheElements();
       this.clickEventListerners();
       this.fetchCategoryApi();
+      this.fetchYearsApi();
       this.fetchArtApi();
     },
 
@@ -31,7 +32,7 @@
       const yearsApi = new YearsApi();
       const years = await yearsApi.getYearsApi();
       this.years = years;
-      this.updateArtUi();
+      this.getHTMLForYearsList();
     },
 
     async fetchArtApi () {
@@ -97,9 +98,24 @@
       }
     },
 
+    getHTMLForYearsList () {
+      const search = window.location.search;
+      console.log(search)
+      const tempStr = this.years.map((year) => {
+        return  `
+        <li>
+          <a href="art-and-exhibitions/index.html${search}#${year}" data-year="${year}">${year}</a>
+        </li>
+        `;
+      }).join('');
+
+      document.querySelector('.year--filter').innerHTML = tempStr;
+      
+    },
+
     filterYears (year) {
-      const $articlesInHTML = this.$art.querySelectorAll('li.articles');
       this.$artList = document.querySelector('.art__list');
+      const $articlesInHTML = this.$art.querySelectorAll('li.articles');
       console.log(this.$artList)
       
       //console.log($articlesInHTML);
