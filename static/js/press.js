@@ -26,7 +26,7 @@ const PRESS_API = 'data/press.json';
         if (article.press_release === "true") {
           tempStr += `
           <li class="flex-container__homepage__list-item">
-            <img loading="lazy" class="flex-container__homepage__img" src="../${article.thumbnail}" alt="${article.title}">
+            <img loading="lazy" class="flex-container__homepage__img" src="${article.thumbnail}" alt="${article.title}">
             <span>${article.title}</span>
             <h2>${article.place}</h2>
             <p>${article.description}</p>
@@ -46,7 +46,7 @@ const PRESS_API = 'data/press.json';
         if (article.press_release === "false") {
           tempStr += `
           <li class="flex-container__homepage__list-item">
-            <img loading="lazy" class="flex-container__homepage__img" src="../${article.thumbnail}" alt="${article.title}">
+            <img loading="lazy" class="flex-container__homepage__img" src="${article.thumbnail}" alt="${article.title}">
             <span>${article.title}</span>
             <h2>${article.place}</h2>
             <p>${article.description}</p>
