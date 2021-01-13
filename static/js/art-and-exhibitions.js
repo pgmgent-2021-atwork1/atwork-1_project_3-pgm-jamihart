@@ -45,7 +45,7 @@
 
     updateArtUi () {
       //console.log(this.categories);
-      console.log(this.years);
+      //console.log(this.years);
       const search = window.location.search;
       const params = new URLSearchParams(search);
       //console.log(params.has('category'));
@@ -67,11 +67,10 @@
         
         console.log(categoriesParam)
         tempStr = this.years.map((yr) => {
+          console.log(yr)
           const yearsFilter = categoriesParam.filter(yrFiltered => {
             return yrFiltered.year.indexOf(yr) > -1;
-          })
-
-          
+          });
           
           const articleList = yearsFilter.map((articles) => {
             //console.log(articles.year);
@@ -85,21 +84,32 @@
         }).join('');
 
         this.$art.innerHTML = tempStr;
-
-        
-
-
       
       } else {
-        //console.log(this.art);
-
+        let tempStr = '';
         
+        console.log(this.art)
+        tempStr = this.years.map((yr) => {
+          console.log(yr)
+          const yearsFilter = this.art.filter(yrFiltered => {
+            return yrFiltered.year.indexOf(yr) > -1;
+          });
 
-        const tempStr = this.art.map((articlesAll) => {
-          //console.log(articlesAll.year);
+          //console.log(yearsFilter)
+          
+          const articleList = yearsFilter.map((articles) => {
+            //console.log(articles.year);
+            return `<li class="articles" data-year="${articles.year}">${articles.year} - ${articles.title}</li>`
+          }).join('');
+
+          console.log(articleList)
+
           return `
-          <li class="articles" data-year="${articlesAll.year}">${articlesAll.year} - ${articlesAll.title}</li>`
+          <h1>${yr}</h1>
+          <ul class="art__list">${articleList}</ul>
+          `
         }).join('');
+
         this.$art.innerHTML = tempStr;
 
       }
