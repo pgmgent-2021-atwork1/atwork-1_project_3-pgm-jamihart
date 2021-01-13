@@ -2,7 +2,7 @@
   const app = {
     initialize () {
       this.cacheElements();
-      this.clickEventListerners();
+      //this.clickEventListerners();
       this.fetchCategoryApi();
       this.fetchYearsApi();
       this.fetchArtApi();
@@ -13,13 +13,13 @@
       this.$yearFilter = document.querySelectorAll('.year--filter');
     },
 
-    clickEventListerners () {
-      this.$yearFilter.forEach(($filterYear) => {
-        $filterYear.addEventListener('click', (event) => {
-          this.filterYears(event.target.dataset.year);
-        });
-      });
-    },
+    // clickEventListerners () {
+    //   this.$yearFilter.forEach(($filterYear) => {
+    //     $filterYear.addEventListener('click', (event) => {
+    //       this.filterYears(event.target.dataset.year);
+    //     });
+    //   });
+    // },
 
     async fetchCategoryApi () {
       const categoryApi = new CategoryApi();
@@ -78,7 +78,7 @@
           }).join('');
 
           return `
-          <h1>${yr}</h1>
+          <h1 id="${yr}">${yr}</h1>
           <ul class="art__list">${articleList}</ul>
           `
         }).join('');
@@ -105,7 +105,7 @@
           console.log(articleList)
 
           return `
-          <h1>${yr}</h1>
+          <h1 id="${yr}">${yr}</h1>
           <ul class="art__list">${articleList}</ul>
           `
         }).join('');
@@ -130,28 +130,28 @@
       
     },
 
-    filterYears (year) {
-      this.$artList = document.querySelector('.art__list');
-      const $articlesInHTML = this.$art.querySelectorAll('li.articles');
-      console.log(this.$artList)
+    // filterYears (year) {
+    //   this.$artList = document.querySelector('.art__list');
+    //   const $articlesInHTML = this.$art.querySelectorAll('li.articles');
+    //   console.log(this.$artList)
       
-      //console.log($articlesInHTML);
-      $articlesInHTML.forEach(($article, index) => {
-        //console.log($article)
-        const articleYear = $article.dataset.year;
-        //console.log(articleYear);
-          if (year !== 'all') {
-            if (year === articleYear) {
-              $article.classList.remove('hidden');
-            } else {
-              $article.classList.add('hidden');
-            }
-          } else {
-            $article.classList.remove('hidden');
-          }
-          //console.log(articleYear)
-      });
-    }
+    //   //console.log($articlesInHTML);
+    //   $articlesInHTML.forEach(($article, index) => {
+    //     //console.log($article)
+    //     const articleYear = $article.dataset.year;
+    //     //console.log(articleYear);
+    //       if (year !== 'all') {
+    //         if (year === articleYear) {
+    //           $article.classList.remove('hidden');
+    //         } else {
+    //           $article.classList.add('hidden');
+    //         }
+    //       } else {
+    //         $article.classList.remove('hidden');
+    //       }
+    //       //console.log(articleYear)
+    //   });
+    // }
   };
   app.initialize();
 })();
