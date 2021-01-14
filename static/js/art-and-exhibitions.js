@@ -65,22 +65,28 @@
 
         let tempStr = '';
 
-        console.log(categoriesParam)
+
+
+        //console.log(categoriesParam)
         tempStr = this.years.map((yr) => {
-          console.log(yr)
+          //console.log(this.year)
           const yearsFilter = categoriesParam.filter(yrFiltered => {
+            //console.log(yrFiltered.year)
             return yrFiltered.year.indexOf(yr) > -1;
           });
 
+          console.log(yearsFilter)
+
           const articleList = yearsFilter.map((articles) => {
-            //console.log(articles.year);
+            
             return `
             <li class="art_article" data-year="${articles.year}">
                <div class="art__container">
                  <div class="art__content">
-                     <a href=""><h2>${articles.title}</h2></a>
+                     <a href="art-and-exhibitions/in-dialogue-with-calatrava/index.html"><h2>${articles.title}</h2></a>
                      <h3 class="art__content_subtitle">${articles.subtitle}</h3>
-                     <span>${articles.tags} — ${articles.location}</span>
+                     <span>${articles.tags}</span>
+                     <span>${articles.location === null ? '' : '— ' + articles.location}</span>
                  </div>
                  <ul class="art_images__container">
                      ${this.loopImagesArt(articles.images)}
@@ -90,9 +96,11 @@
             `
           }).join('');
 
+          //console.log(articleList);
+
           return `
           <div class="art__content__time">
-            <time class="art__content__year" id="${yr}">${yr}</time>
+            <time class="art__content__year" id="${yearsFilter.length === 0 ? '' : yr}">${yearsFilter.length === 0 ? '' : yr}</time>
           </div>
           <ul class="art__list">${articleList}</ul>
           `
@@ -117,9 +125,10 @@
             <li class="art_article" data-year="${articles.year}">
                <div class="art__container">
                  <div class="art__content">
-                     <a href=""><h2>${articles.title}</h2></a>
+                     <a href="art-and-exhibitions/in-dialogue-with-calatrava/index.html"><h2>${articles.title}</h2></a>
                      <h3 class="art__content_subtitle">${articles.subtitle}</h3>
-                     <span>${articles.tags} — ${articles.location}</span>
+                     <span>${articles.tags}</span>
+                     <span>${articles.location === null ? '' : '— ' + articles.location}</span>
                  </div>
                  <ul class="art_images__container">
                      ${this.loopImagesArt(articles.images)}
@@ -167,7 +176,7 @@
           <a href="art-and-exhibitions/in-dialogue-with-calatrava/index.html"><img class="art__img" src="static/img/${artImg}" alt="Art & Exhibitions" loading="lazy"></a>
         </li>
         `;
-      });
+      }).join('');
       return tempStr;
     },
 

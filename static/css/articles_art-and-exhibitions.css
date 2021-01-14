@@ -110,6 +110,11 @@
   }
 }
 
+.art__content a:hover {
+  color: #003cff;
+  text-decoration: underline;
+}
+
 .art__content_subtitle {
   font-size: 1.125rem;
   font-weight: normal;
@@ -127,7 +132,7 @@
   .art_images__container {
     width: 66%;
     flex-wrap: nowrap;
-    overflow-x: scroll;
+    overflow-x: auto;
   }
 
   .art_images__container::-webkit-scrollbar {
@@ -135,7 +140,18 @@
     background-color: #79595900;
   }
 
+  .art_images__container::-moz-scrollbar {
+    height: 0.5rem;
+    background-color: #79595900;
+  }
+
   .art_images__container::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+    background-color: #555;
+  }
+
+  .art_images__container::-moz-scrollbar-thumb {
     border-radius: 10px;
     -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
     background-color: #555;

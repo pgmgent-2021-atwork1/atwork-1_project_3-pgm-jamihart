@@ -25,12 +25,14 @@ const PRESS_API = 'data/press.json';
         console.log(article.press_release);
         if (article.press_release === "true") {
           tempStr += `
-          <li class="flex-container__homepage__list-item">
-            <img loading="lazy" class="flex-container__homepage__img" src="${article.thumbnail}" alt="${article.title}">
+          <li class="flex-container__cards__list-item">
+            <a href="press/my-secret-garden-valencia/index.html">
+              <img loading="lazy" class="flex-container__cards__img" src="${article.thumbnail}" alt="${article.title}">
+            </a>
             <span>${article.title}</span>
             <h2>${article.place}</h2>
             <p>${article.description}</p>
-            <a class="flex-container__homepage__list-item__link" href="press/my-secret-garden-valencia/index.html">${article.call_to_action}</a>
+            <a class="flex-container__cards__list-item__link" href="press/my-secret-garden-valencia/index.html">${article.call_to_action}</a>
           </li>
           `;
         }
@@ -45,12 +47,14 @@ const PRESS_API = 'data/press.json';
         console.log(article.press_release);
         if (article.press_release === "false") {
           tempStr += `
-          <li class="flex-container__homepage__list-item">
-            <img loading="lazy" class="flex-container__homepage__img" src="${article.thumbnail}" alt="${article.title}">
+          <li class="flex-container__cards__list-item">
+          <a href="press/my-secret-garden-valencia/index.html">
+            <img loading="lazy" class="flex-container__cards__img" src="${article.thumbnail}" alt="${article.title}">
+          </a>
             <span>${article.title}</span>
             <h2>${article.place}</h2>
             <p>${article.description}</p>
-            <a class="flex-container__homepage__list-item__link" href="press/my-secret-garden-valencia/index.html">${article.call_to_action}</a>
+            <a class="flex-container__cards__list-item__link" href="press/my-secret-garden-valencia/index.html">${article.call_to_action}</a>
           </li>
           `;
         }
