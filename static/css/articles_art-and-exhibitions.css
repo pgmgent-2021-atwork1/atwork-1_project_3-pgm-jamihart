@@ -90,6 +90,7 @@
 @media (min-width: 48rem) {
   .art__container {
     display: flex;
+    align-items: center;
   }
 }
 
@@ -137,6 +138,15 @@
     width: 66%;
     flex-wrap: nowrap;
     overflow-x: auto;
+    border-radius: 0.5rem;
+    background: #e6e6e671;
+    height: 10.5rem;
+    padding-left: 0.5rem;
+  }
+
+  .art_images__container::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background-color: #b1b1b1;
   }
 
   .art_images__container::-webkit-scrollbar {
@@ -144,18 +154,7 @@
     background-color: #79595900;
   }
 
-  .art_images__container::-moz-scrollbar {
-    height: 0.5rem;
-    background-color: #79595900;
-  }
-
   .art_images__container::-webkit-scrollbar-thumb {
-    border-radius: 10px;
-    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
-    background-color: #555;
-  }
-
-  .art_images__container::-moz-scrollbar-thumb {
     border-radius: 10px;
     -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
     background-color: #555;
@@ -170,7 +169,8 @@
 @media (min-width: 48rem) {
   .art__img {
     margin-right: 2.5rem;
-    margin-bottom: 0.75rem;
+    margin-top: 0.5rem;
+    border-radius: 0.5rem;
   }
 }
 
