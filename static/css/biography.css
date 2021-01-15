@@ -22,7 +22,7 @@
   margin: 0 auto;
   margin-top: 8rem;
   margin-bottom: 2rem;
-  width: 90rem;
+  /* width: 90rem; */
   max-width: 100%; 
   padding-bottom: calc(495/880 * 100%);
   position: relative;
