@@ -53,33 +53,15 @@
             return yrFiltered.year.indexOf(yr) > -1;
           }); 
 
-          const articleList = yearsFilter.map((articles) => {
-            return `
-            <li class="art_article" data-year="${articles.year}">
-               <div class="art__container">
-                 <div class="art__content">
-                     <a href="art-and-exhibitions/in-dialogue-with-calatrava/index.html"><h2>${articles.title}</h2></a>
-                     <h3 class="art__content_subtitle">${articles.subtitle}</h3>
-                     <span>${articles.tags.join(' / ')}</span>
-                     <span>${articles.location === null ? '' : '— ' + articles.location}</span>
-                 </div>
-                 <ul class="art_images__container">
-                     ${this.loopImagesArt(articles.images)}
-                 </ul>
-               </div>
-             </li>
-            `;
-          }).join('');
+          this.getHTMLForArtcileList(yearsFilter);
 
           return `
           <div class="art__content__time">
             <time class="art__content__year" id="${yearsFilter.length === 0 ? '' : yr}">${yearsFilter.length === 0 ? '' : yr}</time>
           </div>
-          <ul class="art__list">${articleList}</ul>
+          <ul class="art__list">${this.articleList}</ul>
           `
         }).join('');
-
-         // Bovenstaande code in een functie steken want wordt 2 keer gebruikt 
         
         this.$art.innerHTML = tempStr;
 
@@ -90,36 +72,38 @@
             return yrFiltered.year.indexOf(yr) > -1;
           });
 
-          const articleList = yearsFilter.map((articles) => {
-            return `
-            <li class="art_article" data-year="${articles.year}">
-               <div class="art__container">
-                 <div class="art__content">
-                     <a href="art-and-exhibitions/in-dialogue-with-calatrava/index.html"><h2>${articles.title}</h2></a>
-                     <h3 class="art__content_subtitle">${articles.subtitle}</h3>
-                     <span>${articles.tags.join(' / ')}</span>
-                     <span>${articles.location === null ? '' : '— ' + articles.location}</span>
-                 </div>
-                 <ul class="art_images__container">
-                     ${this.loopImagesArt(articles.images)}
-                 </ul>
-               </div>
-             </li>
-             `;
-          }).join('');
+          this.getHTMLForArtcileList(yearsFilter);
 
           return `
           <div class="art__content__time">
             <time class="art__content__year" id="${yr}">${yr}</time>
           </div>
-          <ul class="art__list">${articleList}</ul>
+          <ul class="art__list">${this.articleList}</ul>
           `
         }).join('');
 
-         // Bovenstaande code in een functie steken want wordt 2 keer gebruikt 
-
         this.$art.innerHTML = tempStr;
       }
+    },
+
+    getHTMLForArtcileList (yearsFilter) {
+      this.articleList = yearsFilter.map((articles) => {
+        return `
+        <li class="art_article" data-year="${articles.year}">
+           <div class="art__container">
+             <div class="art__content">
+                 <a href="art-and-exhibitions/in-dialogue-with-calatrava/index.html"><h2>${articles.title}</h2></a>
+                 <h3 class="art__content_subtitle">${articles.subtitle}</h3>
+                 <span>${articles.tags.join(' / ')}</span>
+                 <span>${articles.location === null ? '' : '— ' + articles.location}</span>
+             </div>
+             <ul class="art_images__container">
+                 ${this.loopImagesArt(articles.images)}
+             </ul>
+           </div>
+         </li>
+         `;
+      }).join('');
     },
 
     getHTMLForYearsList () {
