@@ -25,6 +25,10 @@
   color: #003cff;
 }
 
+.category__list-link--active {
+  border-bottom: 1px solid black;
+}
+
 .year__filter__list {
   display: flex;
   flex-wrap: wrap;

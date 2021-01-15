@@ -1,5 +1,3 @@
-const PRESS_API = 'data/press.json';
-
 (() => {
   const app = {
     initialize () {
