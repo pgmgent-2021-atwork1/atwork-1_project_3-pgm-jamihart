@@ -140,7 +140,7 @@
     overflow-x: auto;
     border-radius: 0.5rem;
     background: #e6e6e671;
-    height: 10.5rem;
+    min-height: 10.5rem;
     padding-left: 0.5rem;
   }
 
