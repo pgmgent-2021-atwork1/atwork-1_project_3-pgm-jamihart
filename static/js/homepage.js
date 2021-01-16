@@ -44,7 +44,6 @@
     },
 
     updateAtelierHomepageUi (atelierData) {
-      console.log(atelierData.atelier);
       let myStr = '';
       for (let i = 0; i < 3; i++) {
         myStr += `

@@ -14,7 +14,6 @@
       const contactTimeInBe = new ContactTimeInBe().timeInBeString(1, 'Belgium');
       this.$contactInfoTimeGallery.innerHTML = contactTimeInBe; 
       this.$contactInfoTimeStudio.innerHTML = contactTimeInBe;
-      console.log(contactTimeInBe);
     },
 
   };

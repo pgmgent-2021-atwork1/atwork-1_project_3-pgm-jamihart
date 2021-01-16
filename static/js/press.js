@@ -17,10 +17,8 @@
     },
 
     updatePressReleasesUi (data) {
-      console.log(data);
       let tempStr = '';
       data.press.map(article => {
-        console.log(article.press_release);
         if (article.press_release === "true") {
           tempStr += `
           <li class="flex-container__cards__list-item">
@@ -39,10 +37,8 @@
     },
 
     updateInThePressUi (data) {
-      console.log(data);
       let tempStr = '';
       data.press.map(article => {
-        console.log(article.press_release);
         if (article.press_release === "false") {
           tempStr += `
           <li class="flex-container__cards__list-item">

@@ -15,7 +15,6 @@
     },
 
     updateAtelierUi (atelierData) {
-      console.log(atelierData.atelier)
       this.$atelier.innerHTML = atelierData.atelier.map(project => {
         return `
         <li class="flex-container__cards__list-item--atelier">

@@ -108,7 +108,6 @@
 
     getHTMLForYearsList () {
       const search = window.location.search;
-      console.log(search)
       const tempStr = this.years.map((year) => {
         return  `
         <li class="year__filter__list-item">
