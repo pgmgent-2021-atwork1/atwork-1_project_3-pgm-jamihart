@@ -1,0 +1,29 @@
+.page__introduction {
+  margin-bottom: 3rem;
+}
+
+@media (min-width: 48rem) {
+  .page__introduction {
+    width: 66%;
+  }
+}
+
+@media (min-width: 64rem) {
+  .page__introduction {
+    margin-top: 4.325rem;
+    width: 50%;
+  }
+}
+
+.page__introduction__text {
+  font-size: 1.05rem;
+  line-height: 1.65rem;
+}
+
+@media (min-width: 64rem) {
+  .page__introduction__text {
+    font-size: 1.75rem;
+    line-height: 2.75rem;
+    margin: 0.5rem 0;
+  }
+}

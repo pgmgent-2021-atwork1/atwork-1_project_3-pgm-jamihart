@@ -1,0 +1,90 @@
+@media (min-width: 48rem) {
+  .contact__info__flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 6rem;
+  }
+}
+
+.contact__info__content {
+  margin-bottom: 2.5rem;
+}
+
+@media (min-width: 48rem) {
+  .contact__info__content {
+    width: 33%;
+  }
+
+  .contact__info__content:nth-child(2) {
+    margin: 0 3rem;
+  }
+}
+
+.contact__info__content p {
+  color: #787878;
+  font-size: 1rem;
+  margin: 0;
+}
+
+.contact__info__content a {
+  font-size: 1rem;
+  font-weight: bold;
+  border-bottom: 2px solid #003cff00;
+}
+
+.contact__info__content a:hover {
+  color: #003cff;
+  border-bottom: 2px solid #003cff;
+}
+
+.contact__info__adres {
+  margin: 1rem 0;
+}
+
+.contact__info__gegevens {
+  margin: 1rem 0;
+}
+
+.contact__info__from__label {
+  font-size: 1.3125rem;
+  margin: 0;
+  margin-bottom: 1rem;
+  font-weight: bold;
+  display: block;
+}
+
+.contact__info__from__input {
+  display: block;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  padding: 0.75rem 0.5rem;
+  width: calc(100% - 1rem);
+  border: 1px solid rgba(17, 17, 19, 0.1);
+}
+
+.contact__info__from__input::placeholder {
+  color: rgba(17, 17, 19, 0.313);
+}
+
+.contact__info__from__textarea {
+  display: block;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  padding: 0.75rem 0.5rem;
+  width: calc(100% - 1rem);
+  border: 1px solid rgba(17, 17, 19, 0.1);
+}
+
+.contact__info__from__textarea::placeholder {
+  color: rgba(17, 17, 19, 0.313);
+  font-family: 'moderat';;
+}
+
+.contact__info__from__button {
+  color: white;
+  background-color: #003cff;
+  border: none;
+  padding: 1rem;
+  cursor: pointer;
+}
